@@ -1,2 +1,4 @@
-# git.limanop.cloudns.cl
-A website to showcase my projects.
+# git.liman.fr.to
+A website about myself and to showcase my projects.
+
+© Liman 2024
