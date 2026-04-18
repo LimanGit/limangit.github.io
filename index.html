@@ -1,465 +1,379 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liman</title>
-
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Hi! I am liman. A hobbyist develoepr who makes useful projects. Although I am a back-end developer, I am also skilled in front-end. You can hire me for your projects.">
-  <meta name="keywords" content="liman, developer, portfolio, web development, programming, software engineer, realiman, project, leveloper, html theme, portfolio theme, limanop">
-  <meta name="author" content="Liman">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://liman.realiman.lol">
-  <meta property="og:title" content="Liman">
-  <meta property="og:description" content="Hi! I am liman. A hobbyist develoepr who makes useful projects. Although I am a back-end developer, I am also skilled in front-end. You can hire me for your projects.">
-  <meta property="og:image" content="https://liman.realiman.lol/cdn/web/android-chrome-256x256.png">
-
-  <!-- Icons -->
-  <link rel="shortcut icon" type="image/x-icon" href="cdn/web/favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="cdn/web/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="cdn/web/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="cdn/web/favicon-16x16.png">
-  <link rel="manifest" href="cdn/web/site.webmanifest">
-  <link rel="mask-icon" href="cdn/web/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#1ced6c">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://liman.realiman.lol">
-  <meta property="twitter:title" content="Liman">
-  <meta property="twitter:description" content="Hi! I am liman. A hobbyist develoepr who makes useful projects. Although I am a back-end developer, I am also skilled in front-end. You can hire me for your projects.">
-  <meta property="twitter:image" content="https://liman.realiman.lol/cdn/web/android-chrome-256x256.png">
-
-  <!-- Discord -->
-  <meta name="theme-color" content="#4F46E5">
-
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- AOS Animation -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
-  <style>
-    @media (max-width: 768px) {
-      .mobile-menu {
-        display: none;
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Liman | Backend Dev</title>
+   
+   <meta name="description" content="I build backend systems. Focus is on stable, fast and secure systems.">
+   <meta name="keywords" content="liman, developer, portfolio, web development, programming, software engineer, blahost, project, leveloper, html theme, portfolio theme, limanop">
+   <meta name="author" content="Liman">
+   
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://liman.realiman.lol">
+   <meta property="og:title" content="Liman">
+   <meta property="og:description" content="I build backend systems. Focus is on stable, fast and secure systems.">
+   <meta property="og:image" content="https://limangit.github.io/cdn/web/android-chrome-256x256.png">
+   
+   <link rel="shortcut icon" type="image/x-icon" href="cdn/web/favicon.ico">
+   <link rel="apple-touch-icon" sizes="180x180" href="cdn/web/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="cdn/web/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="cdn/web/favicon-16x16.png">
+   <link rel="manifest" href="cdn/web/site.webmanifest">
+   <link rel="mask-icon" href="cdn/web/safari-pinned-tab.svg" color="#5bbad5">
+   <meta name="msapplication-TileColor" content="#da532c">
+   <meta name="theme-color" content="#1ced6c">
+   
+   <meta property="twitter:card" content="summary_large_image">
+   <meta property="twitter:url" content="https://limangit.github.io">
+   <meta property="twitter:title" content="Liman">
+   <meta property="twitter:description" content="I build backend systems. Focus is on stable, fast and secure systems.">
+   <meta property="twitter:image" content="https://limangit.github.io/cdn/web/android-chrome-256x256.png">
+   
+   <meta name="theme-color" content="#4F46E5">
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+   
+   <style>
+      :root {
+         color-scheme: dark;
+         --bg: #09090b;
+         --fg: #e4e4e7;
+         --muted: #a1a1aa;
+         --soft: #71717a;
+         --line: rgba(255, 255, 255, 0.10);
+         --card: #18181b;
       }
-
-      .mobile-menu.active {
-        display: flex;
+      
+      * {
+         box-sizing: border-box;
       }
-    }
-
-    .typewriter {
-      overflow: hidden;
-      border-right: .15em solid #4F46E5;
-      white-space: nowrap;
-      margin: 0 auto;
-      letter-spacing: .15em;
-      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-    }
-
-    @keyframes typing {
-      from {
-        width: 0
+      
+      html,
+      body {
+         margin: 0;
+         padding: 0;
+         background: var(--bg);
+         color: var(--fg);
+         font-family: "Inter", sans-serif;
       }
-
-      to {
-        width: 100%
+      
+      body {
+         line-height: 1.6;
       }
-    }
-
-    @keyframes blink-caret {
-
-      from,
-      to {
-        border-color: transparent
+      
+      a {
+         color: inherit;
+         text-decoration: none;
       }
-
-      50% {
-        border-color: #4F46E5
+      
+      p {
+         text-align: justify;
+         margin: 0;
       }
-    }
-
-    .profile-image {
-      width: 300px;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    @media (max-width: 768px) {
-      .profile-image {
-        width: 200px;
-        height: 200px;
+      
+      img {
+         display: block;
+         max-width: 100%;
       }
-    }
-  </style>
+      
+      .ser {
+         font-family: "Cormorant Garamond", serif;
+      }
+      
+      .mono {
+         font-family: "IBM Plex Mono", monospace;
+      }
+      
+      .nav {
+         border-bottom: 1px solid var(--line);
+      }
+      
+      .wrap {
+         max-width: 48rem;
+         margin: 0 auto;
+         padding: 0 1rem;
+      }
+      
+      .nav .wrap {
+         padding-top: 0.75rem;
+         padding-bottom: 0.75rem;
+         font-size: 0.95rem;
+         font-weight: 500;
+         color: #fff;
+      }
+      
+      main.wrap {
+         padding-top: 2rem;
+         padding-bottom: 3rem;
+      }
+      
+      .hero {
+         margin-top: 0;
+      }
+      
+      .ttl {
+         margin: 0;
+         font-size: clamp(3rem, 8vw, 5rem);
+         line-height: 0.95;
+         font-weight: 700;
+         letter-spacing: -0.03em;
+         color: #fff;
+      }
+      
+      .sub {
+         margin-top: 0.75rem;
+         font-size: 0.88rem;
+         line-height: 1.5;
+         color: var(--soft);
+      }
+      
+      .sub2 {
+         margin-top: 0.1rem;
+         font-size: 0.75rem;
+         line-height: 1.5;
+         color: var(--soft);
+      }
+      
+      .lead {
+         margin-top: 0.9rem;
+         max-width: 42rem;
+         font-size: 0.95rem;
+         line-height: 1.75;
+         color: #d4d4d8;
+      }
+      
+      section {
+         margin-top: 2.5rem;
+      }
+      
+      h2 {
+         margin: 0;
+         font-family: "Cormorant Garamond", serif;
+         font-size: 1.45rem;
+         line-height: 1.1;
+         font-weight: 600;
+         color: #fff;
+         letter-spacing: -0.01em;
+      }
+      
+      .txt {
+         margin-top: 0.55rem;
+         max-width: 42rem;
+         font-size: 0.96rem;
+         line-height: 1.8;
+         color: #d4d4d8;
+      }
+      
+      .row {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 1rem;
+      }
+      
+      .cnt {
+         font-size: 0.75rem;
+         color: var(--soft);
+      }
+      
+      .lst {
+         margin-top: 1rem;
+         display: grid;
+         gap: 1rem;
+      }
+      
+      .crd {
+         border: 1px solid var(--line);
+         background: rgba(24, 24, 27, 0.35);
+         overflow: hidden;
+      }
+      
+      .ph {
+         width: 100%;
+         aspect-ratio: 16 / 9;
+         background: #27272a;
+      }
+      
+      .ph img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      
+      .bd {
+         padding: 0.85rem;
+      }
+      
+      .pt {
+         margin: 0;
+         color: #fff;
+         font-size: 0.95rem;
+         font-weight: 600;
+         line-height: 1.3;
+      }
+      
+      .ps {
+         margin-top: 0.2rem;
+         font-size: 0.78rem;
+         color: #a1a1aa;
+      }
+      
+      .lnk {
+         display: inline-block;
+         margin-top: 0.65rem;
+         margin-right: 1.4rem;
+         font-size: 0.78rem;
+         color: #d4d4d8;
+         font-family: "IBM Plex Mono", monospace;
+      }
+      
+      .lnk:hover {
+         text-decoration: underline;
+         text-underline-offset: 3px;
+      }
+      
+      .more {
+         font-size: 0.9rem;
+         color: var(--soft);
+      }
+      
+      .inf {
+         margin-top: 0.75rem;
+         display: grid;
+         gap: 0.65rem;
+         font-size: 0.95rem;
+      }
+      
+      .box {
+         display: block;
+         border: 1px solid var(--line);
+         padding: 0.75rem 0.85rem;
+         font-weight: 500;
+         background: rgba(255, 255, 255, 0.01);
+      }
+      
+      .bold {
+         font-weight: 700;
+      }
+      
+      .box:hover {
+         border-color: rgba(255, 255, 255, 0.18);
+         background: rgba(255, 255, 255, 0.03);
+      }
+      
+      .ftr {
+         margin-top: 3rem;
+         font-size: 0.75rem;
+         color: var(--soft);
+      }
+      
+      @media (max-width: 640px) {
+         main.wrap {
+            padding-top: 1.5rem;
+         }
+         
+         .ttl {
+            font-size: 3.2rem;
+         }
+         
+         .lead,
+         .txt {
+            font-size: 0.93rem;
+         }
+      }
+   </style>
 </head>
 
-<body class="bg-white dark:bg-gray-900 transition-colors duration-300">
-  <!-- Navbar -->
-  <nav class="fixed w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50">
-    <div class="container mx-auto px-4 sm:px-6">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center gap-4">
-          <img src="https://liman.realiman.lol/cdn/web/android-chrome-256x256.png" alt="Profile" class="w-8 h-8 rounded-lg">
-          <span class="text-xl font-bold text-gray-800 dark:text-white">Liman</span>
-        </div>
-
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-
-        <!-- Desktop menu -->
-        <div class="hidden md:flex items-center gap-6">
-          <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Home</a>
-          <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
-          <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Skills</a>
-          <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
-          <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
-          <button id="themeToggle" class="hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
-            <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
-            <i class="fas fa-moon text-blue-500 hidden dark:block"></i>
-          </button>
-        </div>
-      </div>
-
-      <!-- Mobile menu -->
-      <div id="mobile-menu" class="mobile-menu md:hidden flex-col items-center gap-4 py-4">
-        <a href="#home" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Home</a>
-        <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">About</a>
-        <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Skills</a>
-        <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Projects</a>
-        <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">Contact</a>
-        <button id="mobileThemeToggle" class="hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
-          <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
-          <i class="fas fa-moon text-blue-500 hidden dark:block"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="min-h-screen flex items-center pt-16">
-    <div class="container mx-auto px-4 sm:px-6">
-      <div class="flex flex-col items-center gap-12">
-        <!-- Profile Image for mobile -->
-        <div class="md:hidden" data-aos="fade-down">
-          <img src="https://liman.realiman.lol/cdn/web/android-chrome-256x256.png" alt="Profile" class="profile-image rounded-full mx-auto">
-        </div>
-
-        <div class="flex flex-col md:flex-row items-center gap-12">
-          <div class="flex-1 text-center md:text-left" data-aos="fade-right">
-            <h1 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6">
-              Hi, <span class="text-indigo-600 dark:text-indigo-400 typewriter">I'm Liman</span>
-            </h1>
-            <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              CEO of Realiman & Full Stack Developer
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-              <a href="#contact" class="px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-                Contact Me
-              </a>
-              <a href="#projects" class="px-6 py-3 border border-indigo-600 text-indigo-600 dark:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors">
-                View Projects
-              </a>
-            </div>
-          </div>
-          <!-- Profile Image for desktop -->
-          <div class="hidden md:block flex-1" data-aos="fade-left">
-            <img src="https://liman.realiman.lol/cdn/web/android-chrome-256x256.png" alt="Profile" class="profile-image rounded-full mx-auto">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="py-20">
-    <div class="container mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12" data-aos="fade-up">
-        About Me
-      </h2>
-      <div class="max-w-3xl mx-auto text-gray-600 dark:text-gray-300 space-y-6" data-aos="fade-up" data-aos-delay="200">
-        <p class="text-center md:text-left">
-          I am a passionate backend developer with experience of 5 years in building robust applications, specializing in server-side development, API integration, database management, and cloud services by handling almost all the aspects concerning backend architecture. My focus is mainly on delivering scalable and efficient systems.
-        </p>
-        <p class="text-center md:text-left">
-          I am a specialist in back-end development. I enjoy building robust, scalable systems and applications. While I am comfortable with front-end technologies, my passion lies in server-side logic, databases, and optimizing application performance.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
-    <div class="container mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12" data-aos="fade-up">
-        Skills
-      </h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg text-center" data-aos="flip-left">
-          <i class="fab fa-node-js text-4xl text-green-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">NodeJS</h3>
-        </div>
-        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg text-center" data-aos="flip-left" data-aos-delay="100">
-          <i class="fab fa-python text-4xl text-blue-700 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">Python</h3>
-        </div>
-        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg text-center" data-aos="flip-left" data-aos-delay="200">
-          <i class="fab fa-golang text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">GO</h3>
-        </div>
-        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg text-center" data-aos="flip-left" data-aos-delay="300">
-          <i class="fab fa-html5 text-4xl text-orange-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">HTML</h3>
-        </div>
-        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg text-center" data-aos="flip-left" data-aos-delay="300">
-          <i class="fab fa-css3-alt text-4xl text-blue-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">CSS</h3>
-        </div>
-        <div class="p-6 bg-white dark:bg-gray-700 rounded-xl shadow-lg text-center" data-aos="flip-left" data-aos-delay="300">
-          <i class="fab fa-js text-4xl text-yellow-500 mb-4"></i>
-          <h3 class="text-xl font-semibold text-gray-800 dark:text-white">JavaScript</h3>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects" class="py-20">
-    <div class="container mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12" data-aos="fade-up">
-        Projects
-      </h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up">
-          <img src="https://placehold.co/400x300" alt="Realiman" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">Realiman</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">Realiman is a company founded by Liman and Real. Realiman is a place with solutions for people.</p>
-            <div class="flex gap-4">
-              <a href="https://github.com/realiman" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
-                <i class="fab fa-github text-xl"></i>
-              </a>
-              <a href="https://realiman.lol" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
-                <i class="fas fa-external-link-alt text-xl"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://placehold.co/400x300" alt="Project 2" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">J311Y</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">J311Y is a development team for developing unique and hidden projects.</p>
-            <div class="flex gap-4">
-              <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
-                <i class="fab fa-github text-xl"></i>
-              </a>
-              <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
-                <i class="fas fa-external-link-alt text-xl"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://placehold.co/400x300" alt="Project 3" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">DeprecatedBots</h3>
-            <p class="text-gray-600 dark:text-gray-300 mb-4">DeprecetedBots is a collection of my discord bots that was once popular but i stopped working and made it open source. (Coming Soon)</p>
-            <div class="flex gap-4">
-              <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
-                <i class="fab fa-github text-xl"></i>
-              </a>
-              <a href="#" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-700">
-                <i class="fas fa-external-link-alt text-xl"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
-    <div class="container mx-auto px-4 sm:px-6">
-      <h2 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12" data-aos="fade-up">
-        Contact Me
-      </h2>
-      <div class="max-w-2xl mx-auto">
-        <div class="flex justify-center gap-8 mb-12" data-aos="fade-up" data-aos-delay="100">
-          <a href="mailto:liman@realiman.lol" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
-            <i class="fas fa-envelope text-3xl"></i>
-          </a>
-          <a href="https://discord.com/users/707058653727031298" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
-            <i class="fab fa-discord text-3xl"></i>
-          </a>
-          <a href="https://twitter.com/limanshit" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
-            <i class="fab fa-x-twitter text-3xl"></i>
-          </a>
-          <a href="https://github.com/LimanGit" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
-            <i class="fab fa-github text-3xl"></i>
-          </a>
-          <a href="#" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
-            <i class="fab fa-linkedin text-3xl"></i>
-          </a>
-        </div>
-
-        <form class="space-y-6" data-aos="fade-up" data-aos-delay="200">
-          <div>
-            <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Name</label>
-            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 outline-none">
-          </div>
-          <div>
-            <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email</label>
-            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 outline-none">
-          </div>
-          <div>
-            <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
-            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-indigo-500 outline-none"></textarea>
-          </div>
-          <button type="submit" disabled class="w-full px-6 py-3 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors">
-            Send Message
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-8 bg-white dark:bg-gray-900">
-    <div class="container mx-auto px-4 sm:px-6">
-      <div class="flex flex-col md:flex-row justify-between items-center">
-        <div class="flex items-center gap-4 mb-4 md:mb-0">
-          <img src="https://liman.realiman.lol/cdn/web/android-chrome-256x256.png" alt="Profile" class="w-8 h-8 rounded-lg">
-          <span class="text-gray-600 dark:text-gray-300">© 2024 Liman. All rights reserved.</span>
-        </div>
-        <div>
-          <span class="text-white">Leveloper Theme By Liman</span>
-        </div>
-        <div class="flex gap-4">
-          <a href="https://github.com/LimanGit/leveloper" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
-            Get the theme
-          </a>
-          <a href="https://realiman.lol" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400">
-            Realiman
-          </a>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 1000,
-      once: true,
-      mirror: true
-    });
-
-    // Mobile Menu Toggle
-    document.addEventListener('DOMContentLoaded', function() {
-      const mobileMenuButton = document.getElementById('mobile-menu-button');
-      const mobileMenu = document.getElementById('mobile-menu');
-
-      // Check if the mobile menu button exists
-      if (mobileMenuButton) {
-        mobileMenuButton.addEventListener('click', function() {
-          mobileMenu.classList.toggle('active'); // Toggle the 'active' class to show/hide the mobile menu
-        });
-      }
-    });
-
-    // Theme Toggle Function
-    function toggleTheme() {
-      const isDarkMode = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDarkMode ? 'dark' : 'light'); // Save theme preference to localStorage
-    }
-
-    // Apply theme on page load
-    document.addEventListener('DOMContentLoaded', function() {
-      // Check for saved theme in localStorage
-      const savedTheme = localStorage.getItem('theme');
-
-      // If saved theme is dark, apply dark theme
-      if (savedTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else if (savedTheme === 'light') {
-        document.documentElement.classList.remove('dark');
-      }
-
-      // Add event listener to theme toggle buttons
-      const themeToggleButton = document.getElementById('theme-toggle-button');
-      if (themeToggleButton) {
-        themeToggleButton.addEventListener('click', toggleTheme); // Toggle theme when button is clicked
-      }
-    });
-
-    // Smooth Scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-    // Navbar Scroll Effect
-    const navbar = document.querySelector('nav');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 0) {
-        navbar.classList.add('shadow-lg');
-      } else {
-        navbar.classList.remove('shadow-lg');
-      }
-    });
-
-    // Form Submission
-    const form = document.querySelector('form');
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      // Add your form submission logic here
-      alert('Message sent successfully!');
-      form.reset();
-    });
-
-    // Typewriter Effect
-    function typeWriter(text, element) {
-      let i = 0;
-      element.textContent = '';
-
-      function type() {
-        if (i < text.length) {
-          element.textContent += text.charAt(i);
-          i++;
-          setTimeout(type, 100);
-        }
-      }
-      type();
-    }
-
-    // Initialize typewriter effect after a short delay
-    setTimeout(() => {
-      const typewriterElement = document.querySelector('.typewriter');
-      const originalText = typewriterElement.textContent;
-      typeWriter(originalText, typewriterElement);
-    }, 500);
-  </script>
+<body>
+   <header class="nav">
+      <div class="wrap">Liman's Portfolio</div>
+   </header>
+   
+   <main class="wrap">
+      <section class="hero">
+         <h1 class="ttl ser">Liman</h1>
+         
+         <div class="sub mono">
+            <p>Backend developer</p>
+            <p>5+ years of experience</p>
+         </div>
+         
+         <p class="lead">
+            I build backend systems. Focus is on stable, fast and secure systems.
+         </p>
+      </section>
+      
+      <section>
+         <h2 class="ser">About Me</h2>
+         <p class="txt">
+            I am Liman. I am a 16-year-old college student. I started learning programming around 2020. Back then, I made bots for social media apps like Discord. After that, I moved into backend development.
+            
+            I used Node.js when I started. I also tried to get into frontend development, but when I saw people creating new frameworks every month, it became hard to keep up. People would start using one framework, calling it “all-in-one,” then switch to another, saying “this is the one.” I left frontend development after that.
+            
+            I then focused on backend development and grew interested in it. I tried learning lower-level languages like C, Rust, and Go. I chose Go because it was easy to work with and suitable for backend systems. I am currently learning Rust to build safer systems and C to better understand the fundamentals of programming.
+         </p>
+      </section>
+      
+      <section>
+         <h2 class="ser">Skills</h2>
+         <p class="txt">
+            I am a developer who focuses only on backend development. I am not a full-stack developer like others who claim to be.
+            
+            I have over 5 years of experience in coding. I use <span class="bold">Go</span>, <span class="bold">NodeJS</span>, and <span class="bold">Python</span>. I build systems that are stable.
+         </p>
+      </section>
+      
+      <section>
+         <h2 class="ser">What I do</h2>
+         <p class="txt">
+            I focus on compatibility, speed, security, and scaling. I build systems that can last for a long time. I make systems that can handle more load by spreading work across multiple machines.
+            
+            I pay close attention to security, so my systems are built to be safe. I make sure that if my systems are passed to other developers, they can understand the code and continue working on it. I also make sure the system is fast for users.
+            
+            My systems use as few resources as possible because I try to keep it efficient by using every method of optimization. I have over 5 years of experience. I avoid building systems that do not last long or cause problems later.
+         </p>
+      </section>
+      
+      <section>
+         <div class="row">
+            <h2 class="ser">Projects</h2>
+            <span class="cnt mono">1</span>
+         </div>
+         
+         <div class="lst">
+            <article class="crd">
+               <div class="ph"></div>
+               <div class="bd">
+                  <h3 class="pt">Blahost</h3>
+                  <p class="sub2 mono">Founder</p>
+                  <p class="ps">Blahost is a multi-product company that mainly focuses on hosting services.</p>
+                  
+                  <a href="https://blahost.lol" target="_blank" rel="noreferrer" class="lnk">Visit ↗</a>
+                  <!-- <a href="https://github.com/LimanGit" target="_blank" rel="noreferrer" class="lnk">How I made it ↗</a> -->
+               </div>
+            </article>
+            
+            <!-- <div class="more">No more projects</div> -->
+         </div>
+      </section>
+      
+      <section>
+         <h2 class="ser">Info</h2>
+         
+         <div class="inf">
+            <a href="mailto:liman@blahost.lol" class="box">Email: liman [at] blahost [dot] lol</a>
+            <a href="https://github.com/LimanGit" target="_blank" rel="noreferrer" class="box">Github: LimanGit</a>
+         </div>
+      </section>
+      
+      <footer class="ftr">
+         &copy; Liman 2026
+      </footer>
+   </main>
 </body>
 
 </html>
