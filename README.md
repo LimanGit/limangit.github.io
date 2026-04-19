@@ -1,4 +1,5 @@
-# git.liman.fr.to
+# Liman
+
 A website about myself and to showcase my projects.
 
-© Liman 2024
+© Liman 2026

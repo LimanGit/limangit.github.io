@@ -7,11 +7,10 @@
    <title>Liman | Backend Dev</title>
    
    <meta name="description" content="I build backend systems. Focus is on stable, fast and secure systems.">
-   <meta name="keywords" content="liman, developer, portfolio, web development, programming, software engineer, blahost, project, leveloper, html theme, portfolio theme, limanop">
    <meta name="author" content="Liman">
    
    <meta property="og:type" content="website">
-   <meta property="og:url" content="https://liman.realiman.lol">
+   <meta property="og:url" content="https://liman.blahost.lol">
    <meta property="og:title" content="Liman">
    <meta property="og:description" content="I build backend systems. Focus is on stable, fast and secure systems.">
    <meta property="og:image" content="https://limangit.github.io/cdn/web/android-chrome-256x256.png">
@@ -23,15 +22,14 @@
    <link rel="manifest" href="cdn/web/site.webmanifest">
    <link rel="mask-icon" href="cdn/web/safari-pinned-tab.svg" color="#5bbad5">
    <meta name="msapplication-TileColor" content="#da532c">
-   <meta name="theme-color" content="#1ced6c">
+   <meta name="theme-color" content="#4F46E5">
    
    <meta property="twitter:card" content="summary_large_image">
    <meta property="twitter:url" content="https://limangit.github.io">
    <meta property="twitter:title" content="Liman">
    <meta property="twitter:description" content="I build backend systems. Focus is on stable, fast and secure systems.">
    <meta property="twitter:image" content="https://limangit.github.io/cdn/web/android-chrome-256x256.png">
-   
-   <meta name="theme-color" content="#4F46E5">
+   <meta name="robots" content="index, follow">
    
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -82,6 +80,7 @@
       
       .ser {
          font-family: "Cormorant Garamond", serif;
+         font-weight: 700;
       }
       
       .mono {
@@ -90,6 +89,10 @@
       
       .nav {
          border-bottom: 1px solid var(--line);
+         position: sticky;
+         z-index: 1000;
+         background: var(--bg);
+         top: 0;
       }
       
       .wrap {
@@ -115,7 +118,7 @@
          margin-top: 0;
       }
       
-      .ttl {
+      .title {
          margin: 0;
          font-size: clamp(3rem, 8vw, 5rem);
          line-height: 0.95;
@@ -150,6 +153,19 @@
          margin-top: 2.5rem;
       }
       
+      .chgroup {
+         display: flex;
+         margin: 5px 0;
+      }
+      
+      .chip {
+         border: 1px solid var(--line);
+         padding: 0.1rem 0.85rem;
+         background: rgba(255, 255, 255, 0.01);
+         font-family: "IBM Plex Mono", monospace;
+         font-weight: 600;
+      }
+      
       h2 {
          margin: 0;
          font-family: "Cormorant Garamond", serif;
@@ -164,7 +180,7 @@
          margin-top: 0.55rem;
          max-width: 42rem;
          font-size: 0.96rem;
-         line-height: 1.8;
+         line-height: 2;
          color: #d4d4d8;
       }
       
@@ -180,13 +196,13 @@
          color: var(--soft);
       }
       
-      .lst {
+      .list {
          margin-top: 1rem;
          display: grid;
          gap: 1rem;
       }
       
-      .crd {
+      .card {
          border: 1px solid var(--line);
          background: rgba(24, 24, 27, 0.35);
          overflow: hidden;
@@ -241,7 +257,7 @@
          color: var(--soft);
       }
       
-      .inf {
+      .info {
          margin-top: 0.75rem;
          display: grid;
          gap: 0.65rem;
@@ -265,7 +281,7 @@
          background: rgba(255, 255, 255, 0.03);
       }
       
-      .ftr {
+      .footer {
          margin-top: 3rem;
          font-size: 0.75rem;
          color: var(--soft);
@@ -276,7 +292,7 @@
             padding-top: 1.5rem;
          }
          
-         .ttl {
+         .title {
             font-size: 3.2rem;
          }
          
@@ -295,7 +311,7 @@
    
    <main class="wrap">
       <section class="hero">
-         <h1 class="ttl ser">Liman</h1>
+         <h1 class="title ser">Liman</h1>
          
          <div class="sub mono">
             <p>Backend developer</p>
@@ -309,11 +325,16 @@
       
       <section>
          <h2 class="ser">About Me</h2>
+         
          <p class="txt">
-            I am Liman. I am a 16-year-old college student. I started learning programming around 2020. Back then, I made bots for social media apps like Discord. After that, I moved into backend development.
-            
+            I am Liman, a 16-year-old college student. I started learning programming around 2020. Back then, I made bots for social media apps like Discord. After that, I moved into backend development.
+         </p>
+         
+         <p class="txt">
             I used Node.js when I started. I also tried to get into frontend development, but when I saw people creating new frameworks every month, it became hard to keep up. People would start using one framework, calling it “all-in-one,” then switch to another, saying “this is the one.” I left frontend development after that.
-            
+         </p>
+         
+         <p class="txt">
             I then focused on backend development and grew interested in it. I tried learning lower-level languages like C, Rust, and Go. I chose Go because it was easy to work with and suitable for backend systems. I am currently learning Rust to build safer systems and C to better understand the fundamentals of programming.
          </p>
       </section>
@@ -321,56 +342,77 @@
       <section>
          <h2 class="ser">Skills</h2>
          <p class="txt">
-            I am a developer who focuses only on backend development. I am not a full-stack developer like others who claim to be.
+            I am a developer who focuses only on backend development. I am not a full-stack developer like other imposters who claim to be.
             
-            I have over 5 years of experience in coding. I use <span class="bold">Go</span>, <span class="bold">NodeJS</span>, and <span class="bold">Python</span>. I build systems that are stable.
+            I have been programming since 2020. I use <span class="bold">Go</span>, <span class="bold">NodeJS</span>, and <span class="bold">Python</span>. I build systems that you would love.
          </p>
+         <div class="chgroup">
+            <p class="chip">Go</p>
+            <p class="chip">Python</p>
+            <p class="chip">NodeJS</p>
+         </div>
       </section>
       
       <section>
          <h2 class="ser">What I do</h2>
+         
          <p class="txt">
             I focus on compatibility, speed, security, and scaling. I build systems that can last for a long time. I make systems that can handle more load by spreading work across multiple machines.
-            
+         </p>
+         
+         <p class="txt">
             I pay close attention to security, so my systems are built to be safe. I make sure that if my systems are passed to other developers, they can understand the code and continue working on it. I also make sure the system is fast for users.
-            
+         </p>
+         
+         <p class="txt">
             My systems use as few resources as possible because I try to keep it efficient by using every method of optimization. I have over 5 years of experience. I avoid building systems that do not last long or cause problems later.
          </p>
       </section>
       
       <section>
-         <div class="row">
-            <h2 class="ser">Projects</h2>
-            <span class="cnt mono">1</span>
-         </div>
-         
-         <div class="lst">
-            <article class="crd">
-               <div class="ph"></div>
-               <div class="bd">
-                  <h3 class="pt">Blahost</h3>
-                  <p class="sub2 mono">Founder</p>
-                  <p class="ps">Blahost is a multi-product company that mainly focuses on hosting services.</p>
-                  
-                  <a href="https://blahost.lol" target="_blank" rel="noreferrer" class="lnk">Visit ↗</a>
-                  <!-- <a href="https://github.com/LimanGit" target="_blank" rel="noreferrer" class="lnk">How I made it ↗</a> -->
-               </div>
-            </article>
-            
-            <!-- <div class="more">No more projects</div> -->
-         </div>
-      </section>
-      
-      <section>
          <h2 class="ser">Info</h2>
          
-         <div class="inf">
+         <div class="info">
             <a href="mailto:liman@blahost.lol" class="box">Email: liman [at] blahost [dot] lol</a>
             <a href="https://github.com/LimanGit" target="_blank" rel="noreferrer" class="box">Github: LimanGit</a>
          </div>
       </section>
       
-      <footer class="ftr">
+      <section>
+         <div class="row">
+            <h2 class="ser">Projects</h2>
+            <span class="cnt mono" id="pcnt">0</span>
+         </div>
+         <div class="list" id="plist">
+         </div>
+         <div class="more">I am working on more private projects</div>
+      </section>
+      
+      <script id="a9x21">
+         fetch("projects.json")
+            .then(r => r.json())
+            .then(d => {
+               const list = document.getElementById("plist");
+               const cnt = document.getElementById("pcnt");
+               cnt.textContent = d.length;
+               d.forEach(p => {
+                  const el = document.createElement("article");
+                  el.className = "card";
+                  el.innerHTML = `
+                   <div class="ph">${p.img?`<img src="${p.img}" alt="${p.title}">`:""}</div>
+                   <div class="bd">
+                    <h3 class="pt">${p.title}</h3>
+                    <p class="sub2 mono">${p.sub||""}</p>
+                    <p class="ps">${p.description||""}</p>
+                    ${(p.links||[]).map(l=>`<a href="${l.link}" target="_blank" rel="noopener noreferrer" class="lnk">${l.text}</a>`).join("")}
+                   </div>
+                  `;
+                  list.appendChild(el);
+               });
+            });
+      </script>
+      
+      <footer class="footer">
          &copy; Liman 2026
       </footer>
    </main>
