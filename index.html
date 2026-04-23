@@ -10,7 +10,7 @@
    <meta name="author" content="Liman">
    
    <meta property="og:type" content="website">
-   <meta property="og:url" content="https://liman.blahost.lol">
+   <meta property="og:url" content="https://limangit.githun.io">
    <meta property="og:title" content="Liman">
    <meta property="og:description" content="I build backend systems. Focus is on stable, fast and secure systems.">
    <meta property="og:image" content="https://limangit.github.io/cdn/web/android-chrome-256x256.png">
@@ -33,7 +33,7 @@
    
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Nunito:wght@400&display=swap" rel="stylesheet">
    
    <style>
       :root {
@@ -182,6 +182,7 @@
          font-size: 0.96rem;
          line-height: 2;
          color: #d4d4d8;
+         font-family: "Nunito", sans-serif;
       }
       
       .row {
@@ -252,6 +253,18 @@
          text-underline-offset: 3px;
       }
       
+      .lnk2 {
+         display: inline-block;
+         font-size: 0.78rem;
+         color: #d4d4d8;
+         font-family: "IBM Plex Mono", monospace;
+      }
+      
+      .lnk2:hover {
+         text-decoration: underline;
+         text-underline-offset: 3px;
+      }
+      
       .more {
          font-size: 0.9rem;
          color: var(--soft);
@@ -287,6 +300,7 @@
          color: var(--soft);
       }
       
+      
       @media (max-width: 640px) {
          main.wrap {
             padding-top: 1.5rem;
@@ -306,7 +320,10 @@
 
 <body>
    <header class="nav">
-      <div class="wrap">Liman's Portfolio</div>
+      <div class="wrap row">
+         <div class="mono">Liman's Portfolio</div>
+         <a href="/blogs" class="cnt lnk2" style="font-size: 0.9rem;">Blogs</a>
+      </div>
    </header>
    
    <main class="wrap">
@@ -411,11 +428,10 @@
                });
             });
       </script>
-      
-      <footer class="footer">
-         &copy; Liman 2026
-      </footer>
    </main>
+   <footer class="wrap footer">
+      &copy; Liman 2026
+   </footer>
 </body>
 
 </html>
